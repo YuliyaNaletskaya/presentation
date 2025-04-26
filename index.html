@@ -20,7 +20,16 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1>Micro Frontend Architecture</h1>
+          <h1>Micro Frontend</h1>
+        </section>
+        <section>
+          <h3 style="color: rgb(238, 175, 15)">How we came to the micro frontend</h3>
+          <ol style="font-size: 2.2rem">
+            <li class="fragment fade-in">Monolith architecture: for projects managed by one team with databases, backend, and frontend shared</li>
+            <li class="fragment fade-in">Separated backend and frontend development</li>
+            <li class="fragment fade-in">Frontend development separated in isolated parts</li>
+            <li class="fragment fade-in">Micro frontend: an application is split into isolated, self-managed parts</li>
+          </ol>
         </section>
         <section>
           <h2>What is Micro Frontend</h2>
@@ -40,15 +49,13 @@
         </section>
         <section>
           <h2>Micro Frontend Advantages</h2>
-          <ul style="font-size: 2.2rem; color: rgb(86, 140, 255)">
+          <ul style="font-size: 2.2rem; color:  rgb(238, 175, 15)">
             <li class="fragment fade-up">
               <span>Scalability:</span>
               <span
                 style="
                   display: inline-block;
-                  color: rgb(255, 255, 245);
-                  font-weight: 400;
-                "
+                  color: rgb(255, 255, 245);"
                 class="fragment fade-left"
                 >You can independently scale parts of the front end</span
               >
@@ -58,9 +65,7 @@
               <span
                 style="
                   display: inline-block;
-                  color: rgb(255, 255, 245);
-                  font-weight: 400;
-                "
+                  color: rgb(255, 255, 245);"
                 class="fragment fade-left"
                 >Different teams - different technologies
               </span>
@@ -70,9 +75,7 @@
               <span
                 style="
                   display: inline-block;
-                  color: rgb(255, 255, 245);
-                  font-weight: 400;
-                "
+                  color: rgb(255, 255, 245);"
                 class="fragment fade-left"
                 >Modules reusable across multiple projects
               </span>
@@ -82,9 +85,7 @@
               <span
                 style="
                   display: inline-block;
-                  color: rgb(255, 255, 245);
-                  font-weight: 400;
-                "
+                  color: rgb(255, 255, 245);"
                 class="fragment fade-left"
                 >Small and more focused modules - more manageable maintenance
               </span>
@@ -119,36 +120,32 @@
         <section>
           <section>
             <h2>Micro Frontend Architecture</h2>
-            <p>
+            <p style="font-size: 2.5rem;">
               A collection of small, self-contained frontend modules each
               responsible for a specific part of the user interface.
             </p>
-            <p>Permits independent Development, testing and deployment.</p>
+            <p style="font-size: 2.5rem;">Permits independent Development, testing and deployment.</p>
           </section>
           <section>
             <h3>Key components</h3>
-            <ul style="font-size: 2rem; color: rgb(86, 140, 255)">
+            <ul style="font-size: 2rem; color: rgb(238, 175, 15)">
               <li class="fragment fade-up">
-                <span>Module Composition:</span>
+                <span style="font-weight: 600">Module Composition:</span>
                 <span
                   style="
                     display: inline-block;
-                    color: rgb(255, 255, 245);
-                    font-weight: 400;
-                  "
+                    color: rgb(255, 255, 245);"
                   class="fragment fade-left"
                   >each module represents a different feature or
                   functionality</span
                 >
               </li>
               <li class="fragment fade-up">
-                <span>Integration Layer:</span>
+                <span style="font-weight: 600">Integration Layer:</span>
                 <span
                   style="
                     display: inline-block;
-                    color: rgb(255, 255, 245);
-                    font-weight: 400;
-                  "
+                    color: rgb(255, 255, 245);"
                   class="fragment fade-left"
                   >responsible for combining individual modules into a symmetric
                   user interface</span
@@ -186,7 +183,7 @@
                 </p>
               </li>
               <li class="fragment fade-up">
-                <span>Deployment and Orchestration:</span>
+                <span style="font-weight: 600">Deployment and Orchestration:</span>
                 <span
                   style="
                     display: inline-block;
@@ -211,8 +208,8 @@
           </section>
         </section>
         <section>
-          <h3>Micro Frontends Disadvantages</h3>
-          <ul  style="font-size: 2rem; color: rgb(238, 175, 15)">
+          <h2 style="color: rgb(255, 105, 105)">Micro Frontends Disadvantages</h2>
+          <ul  style="font-size: 2rem;">
             <li class="fragment fade-left">increasing the web app’s payload size</li>
             <li class="fragment fade-left">hard to maintain communication (between micro frontends)</li>
             <li class="fragment fade-left">separate teams working on each micro frontend create pages inconsistent in terms of style, and UX/UI</li>
