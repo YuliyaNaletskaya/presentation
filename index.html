@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Presentation</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Micro Frontend</h1>
+        </section>
+        <section>
+          <h3 style="color: rgb(238, 175, 15)">How we came to the micro frontend</h3>
+          <ol style="font-size: 2.2rem">
+            <li class="fragment fade-in">Monolith architecture: for projects managed by one team with databases, backend, and frontend shared</li>
+            <li class="fragment fade-in">Separated backend and frontend development</li>
+            <li class="fragment fade-in">Frontend development separated in isolated parts</li>
+            <li class="fragment fade-in">Micro frontend: an application is split into isolated, self-managed parts</li>
+          </ol>
+        </section>
+        <section>
+          <h2>What is Micro Frontend</h2>
+          <p>
+            A design pattern in software architecture where the user interface
+            (UI) of a web application is broken down into smaller parts for more
+            manageable parts known as micro front-ends.
+          </p>
+          <p>
+            <small>
+              <a
+                href="https://www.geeksforgeeks.org/what-are-micro-frontends-definition-uses-architecture/"
+                >https://www.geeksforgeeks.org/what-are-micro-frontends-definition-uses-architecture</a
+              >
+            </small>
+          </p>
+        </section>
+        <section>
+          <h2>Micro Frontend Advantages</h2>
+          <ul style="font-size: 2.2rem; color:  rgb(238, 175, 15)">
+            <li class="fragment fade-up">
+              <span>Scalability:</span>
+              <span
+                style="
+                  display: inline-block;
+                  color: rgb(255, 255, 245);"
+                class="fragment fade-left"
+                >You can independently scale parts of the front end</span
+              >
+            </li>
+            <li class="fragment fade-up">
+              <span>Team Autonomy:</span>
+              <span
+                style="
+                  display: inline-block;
+                  color: rgb(255, 255, 245);"
+                class="fragment fade-left"
+                >Different teams - different technologies
+              </span>
+            </li>
+            <li class="fragment fade-up">
+              <span>Reusability:</span>
+              <span
+                style="
+                  display: inline-block;
+                  color: rgb(255, 255, 245);"
+                class="fragment fade-left"
+                >Modules reusable across multiple projects
+              </span>
+            </li>
+            <li class="fragment fade-up">
+              <span>Improved Maintenance:</span>
+              <span
+                style="
+                  display: inline-block;
+                  color: rgb(255, 255, 245);"
+                class="fragment fade-left"
+                >Small and more focused modules - more manageable maintenance
+              </span>
+            </li>
+            <li class="fragment fade-up">
+              <span>Faster Development:</span>
+              <span
+                style="
+                  display: inline-block;
+                  color: rgb(255, 255, 245);
+                  font-weight: 400;
+                "
+                class="fragment fade-left"
+                >parallel development, allows teams to release features
+                independently and bring them to market faster
+              </span>
+            </li>
+            <li class="fragment fade-up">
+              <span>Easier Migration:</span>
+              <span
+                style="
+                  display: inline-block;
+                  color: rgb(255, 255, 245);
+                  font-weight: 400;
+                "
+                class="fragment fade-left"
+                >Possibility of migrating gradually
+              </span>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h2>Micro Frontend Architecture</h2>
+            <p style="font-size: 2.5rem;">
+              A collection of small, self-contained frontend modules each
+              responsible for a specific part of the user interface.
+            </p>
+            <p style="font-size: 2.5rem;">Permits independent Development, testing and deployment.</p>
+          </section>
+          <section>
+            <h3>Key components</h3>
+            <ul style="font-size: 2rem; color: rgb(238, 175, 15)">
+              <li class="fragment fade-up">
+                <span style="font-weight: 600">Module Composition:</span>
+                <span
+                  style="
+                    display: inline-block;
+                    color: rgb(255, 255, 245);"
+                  class="fragment fade-left"
+                  >each module represents a different feature or
+                  functionality</span
+                >
+              </li>
+              <li class="fragment fade-up">
+                <span style="font-weight: 600">Integration Layer:</span>
+                <span
+                  style="
+                    display: inline-block;
+                    color: rgb(255, 255, 245);"
+                  class="fragment fade-left"
+                  >responsible for combining individual modules into a symmetric
+                  user interface</span
+                >
+              </li>
+              <li class="fragment fade-up">
+                <span style="font-weight: 600"
+                  >Careful Routing and Navigation</span
+                >
+                <p
+                  style="display: inline; color: rgb(255, 255, 245)"
+                  class="fragment fade-left"
+                >
+                  <span
+                    >are crucial and can be achieved using techniques like</span
+                  >
+                  <span class="fragment highlight-yellow"
+                    >URL routing, event-based communication, or centralized
+                    routing services</span
+                  >
+                </p>
+              </li>
+              <li class="fragment fade-up">
+                <span style="font-weight: 600">Communication:</span>
+                <p
+                  style="display: inline; color: rgb(255, 255, 245)"
+                  class="fragment fade-left"
+                >
+                    data exchange or trigger actions can be established using
+                    techniques like
+                    <a href="https://www.geeksforgeeks.org/what-is-pub-sub/"
+                      >pub-sub messaging</a
+                    >, shared state management, or <a href="https://www.geeksforgeeks.org/rest-api-introduction/">RESTful APIs</a></span
+                  >
+                </p>
+              </li>
+              <li class="fragment fade-up">
+                <span style="font-weight: 600">Deployment and Orchestration:</span>
+                <span
+                  style="
+                    display: inline-block;
+                    color: rgb(255, 255, 245);
+                  "
+                  class="fragment fade-left"
+                  >Independent deployment of every module</span
+                >
+              </li>
+              <li class="fragment fade-up">
+                <span style="font-weight: 600">Orchestration tools:</span>
+                <p
+                  style="display: inline; color: rgb(255, 255, 245)"
+                  class="fragment fade-left"
+                ><a href="https://www.geeksforgeeks.org/introduction-to-kubernetes-k8s/"
+                      >Kubernetes</a
+                    > or <a href="https://www.geeksforgeeks.org/docker-swarm-building-a-highly-scalable-cluster/">Docker Swarm</a></span
+                  >
+                </p>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h2 style="color: rgb(255, 105, 105)">Micro Frontends Disadvantages</h2>
+          <ul  style="font-size: 2rem;">
+            <li class="fragment fade-left">increasing the web app’s payload size</li>
+            <li class="fragment fade-left">hard to maintain communication (between micro frontends)</li>
+            <li class="fragment fade-left">separate teams working on each micro frontend create pages inconsistent in terms of style, and UX/UI</li>
+            <li class="fragment fade-left">a lot of repositories, tools, more build/deploy pipelines, and more complex infrastructure</li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h3 style="color: rgb(238, 175, 15)">Micro Frontends could perfect for:</h3>
+            <ul>
+              <li class="fragment fade-in">Medium or large projects</li>
+              <li class="fragment fade-in">Projects there high productivity is needed</li>
+            </ul>
+          </section>
+          <section>
+            <h3 style="color: rgb(255, 105, 105)">Don’t use Micro Frontends if:</h3>
+            <ul>
+              <li class="fragment fade-in">Your project size is small</li>
+              <li class="fragment fade-in">You have a high risk of poor communication between teams</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h3>Thank for attention</h3>
+          <p><small>by Yuliya Naletskay</small></p>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
